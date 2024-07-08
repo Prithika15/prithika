@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .counter {
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .counter button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+    .counter button:hover {
+        background-color: #e0e0e0;
+    }
+    .counter button:active {
+        background-color: #ccc;
+    }
+    .counter .value {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 18px;
+    }
+</style>
+<title>Increment Decrement Example</title>
+</head>
+<body>
+    <div class="counter">
+        <button onclick="decrement()">-</button>
+        <span class="value" id="counterValue">0</span>
+        <button onclick="increment()">+</button>
+    </div>
+
+    <script>
+        var counterValue = 0;
+        
+        function increment() {
+            counterValue++;
+            document.getElementById('counterValue').textContent = counterValue;
+        }
+        
+        function decrement() {
+            if (counterValue > 0) {
+                counterValue--;
+                document.getElementById('counterValue').textContent = counterValue;
+            }
+        }
+    </script>
+</body>
+</html>
